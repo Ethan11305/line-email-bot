@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 3000
 
 # 啟動指令 (你的檔名是 linbot_email.js)
-CMD ["node", "linbot_email.js"]
+CMD ["node", "linebot_email.js"]
