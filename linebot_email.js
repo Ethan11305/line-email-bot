@@ -43,7 +43,7 @@ const tools = [
   },
 ];
 
-const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash", tools: tools });
+const model = genAI.getGenerativeModel({ model: "gemini-pro", tools: tools });
 
 // 5. 【關鍵】使用者狀態暫存區 (記憶體)
 // 格式: { userId: { step: 'IDLE' | 'WAIT_EMAIL' | 'WAIT_CONTEXT' | 'WAIT_SELECTION', data: {} } }
