@@ -35,10 +35,11 @@ const tools = [
 ];
 
 // 【關鍵修改】拆分成兩個模型實例，避免混亂
-// 1. 文案專家：只負責寫草稿，不帶工具，最穩定
-const modelText = genAI.getGenerativeModel({ model: "gemini-pro" });
-// 2. 寄信專家：帶著工具，專門負責最後一步執行
-const modelTool = genAI.getGenerativeModel({ model: "gemini-pro", tools: tools });
+// 1. 文案專家：使用 2.0 Flash (速度極快、更聰明)
+const modelText = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+
+// 2. 寄信專家：帶著工具，負責執行
+const modelTool = genAI.getGenerativeModel({ model: "gemini-2.0-flash", tools: tools });
 
 
 // 3. 設定 Email (Nodemailer)
